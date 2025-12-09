@@ -161,6 +161,34 @@ mcp-security-scanner/
 └── README.md
 ```
 
+## 🌿 Ramas del Repositorio
+
+| Rama | Contenido |
+|------|-----------|
+| `master` | Código fuente del servidor MCP Security Scanner |
+| `test-vulnerable-app` | Proyecto React de prueba con vulnerabilidades intencionales para validar el MCP |
+
+### Proyecto de Prueba
+
+La rama `test-vulnerable-app` contiene una aplicación React + TypeScript con vulnerabilidades intencionales:
+
+- 📦 **Dependencias vulnerables:** lodash, axios, minimist, node-fetch con CVEs conocidos
+- 💻 **Código vulnerable:** XSS, eval(), innerHTML, tokens en localStorage, redirecciones abiertas
+- 🔑 **Secrets expuestos:** API keys, contraseñas, connection strings
+
+Para usar el proyecto de prueba:
+
+```bash
+# Cambiar a la rama de prueba
+git checkout test-vulnerable-app
+
+# Instalar dependencias
+npm install
+
+# Ejecutar el escaneo desde el MCP
+# En MCP Inspector usar: projectPath = ruta/al/proyecto
+```
+
 ## 📚 Documentación
 
 - [Guía de Uso Paso a Paso](./docs/GUIA_USO.md) - Instrucciones detalladas
