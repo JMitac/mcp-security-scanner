@@ -1,0 +1,37 @@
+{
+  "name": "mcp-security-scanner",
+  "version": "1.0.0",
+  "description": "Servidor MCP para escaneo de vulnerabilidades en código y dependencias. Genera reportes en español con soluciones priorizadas por criticidad.",
+  "type": "module",
+  "main": "src/index.ts",
+  "scripts": {
+    "start": "npx tsx src/index.ts",
+    "mcp:start": "npx tsx src/index.ts",
+    "mcp:inspector": "npx @modelcontextprotocol/inspector npx tsx src/index.ts",
+    "build": "tsc",
+    "typecheck": "tsc --noEmit"
+  },
+  "keywords": [
+    "mcp",
+    "security",
+    "vulnerabilities",
+    "npm-audit",
+    "owasp",
+    "code-analysis",
+    "spanish"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.0",
+    "glob": "^11.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.1",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
